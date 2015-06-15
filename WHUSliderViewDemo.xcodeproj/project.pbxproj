@@ -14,6 +14,7 @@
 		8EFD09211B2F15430096A03B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD09201B2F15430096A03B /* Images.xcassets */; };
 		8EFD09241B2F15430096A03B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD09221B2F15430096A03B /* LaunchScreen.xib */; };
 		8EFD09301B2F15430096A03B /* WHUSliderViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD092F1B2F15430096A03B /* WHUSliderViewDemoTests.m */; };
+		8EFD093B1B2F15650096A03B /* WHUSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD09391B2F15650096A03B /* WHUSliderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		8EFD09291B2F15430096A03B /* WHUSliderViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WHUSliderViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFD092E1B2F15430096A03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFD092F1B2F15430096A03B /* WHUSliderViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHUSliderViewDemoTests.m; sourceTree = "<group>"; };
+		8EFD09391B2F15650096A03B /* WHUSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHUSliderView.m; sourceTree = "<group>"; };
+		8EFD093A1B2F15650096A03B /* WHUSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHUSliderView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		8EFD09121B2F15430096A03B /* WHUSliderViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8EFD09391B2F15650096A03B /* WHUSliderView.m */,
+				8EFD093A1B2F15650096A03B /* WHUSliderView.h */,
 				8EFD09171B2F15430096A03B /* AppDelegate.h */,
 				8EFD09181B2F15430096A03B /* AppDelegate.m */,
 				8EFD091A1B2F15430096A03B /* ViewController.h */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFD093B1B2F15650096A03B /* WHUSliderView.m in Sources */,
 				8EFD091C1B2F15430096A03B /* ViewController.m in Sources */,
 				8EFD09191B2F15430096A03B /* AppDelegate.m in Sources */,
 				8EFD09161B2F15430096A03B /* main.m in Sources */,
@@ -344,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WHUSliderViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WHUSliderViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
