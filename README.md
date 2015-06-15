@@ -15,3 +15,4 @@
     hv.selectedColor=[UIColor redColor];
     [hv constructUI];
 ```
+ ![image](https://github.com/tiger8888/WHUSliderView/blob/master/demo.png)
