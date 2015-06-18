@@ -5,7 +5,7 @@
 3. 支持屏幕旋转
 4. 用法简单:
 ```objc
-    WHUSliderView* hv=[[WHUSliderView alloc] initWithFrmae];
+    WHUSliderView* hv=[[WHUSliderView alloc] init];
     hv.translatesAutoresizingMaskIntoConstraints=NO;
     [self.view addSubview:hv];
     NSDictionary* viewDic=NSDictionaryOfVariableBindings(hv);
