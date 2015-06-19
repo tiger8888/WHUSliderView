@@ -23,10 +23,12 @@ static CGFloat kWHUSelectedLabelHeight=2.0f;
 @property(nonatomic,strong) UIButton* firstBtn;
 @property(nonatomic,strong) UIButton* selectedBtn;
 @property(nonatomic,strong) UILabel* selectLbl;
+@property(nonatomic,assign) BOOL isConstructed;
 @end
 @implementation WHUSliderView
 -(void)setupViewComponts{
     self.topBtnWidth=-1;
+    self.isConstructed=NO;
     self.topScrollView=[[UIScrollView alloc] init];
     _topScrollView.showsHorizontalScrollIndicator=NO;
     _topScrollView.showsVerticalScrollIndicator=NO;
@@ -59,16 +61,27 @@ static CGFloat kWHUSelectedLabelHeight=2.0f;
 }
 
 
-
 -(void)constructUI{
-    
-    [self p_constructUI];
+    if(self.superview==nil)
+        return;
+    else{
+        [self setNeedsLayout];
+        [self layoutIfNeeded];
+    }
 }
 
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    _bottomWidthCts.constant=(_controllerArray.count-1)*self.bounds.size.width;
+    if(!self.isConstructed)
+    {
+        [self p_constructUI];
+    }
+    
+    if(_controllerArray!=nil){
+        _bottomWidthCts.constant=(_controllerArray.count-1)*self.bounds.size.width;
+    }
+    
     if(_selectedBtn!=nil){
         CGPoint p=_bottomScrollView.contentOffset;
         p.x=(_selectedBtn.tag-1000)*self.bounds.size.width;
@@ -81,8 +94,7 @@ static CGFloat kWHUSelectedLabelHeight=2.0f;
 -(void)p_constructUI{
     if(_controllerArray==nil||_controllerArray.count==0)
         return;
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
+    self.isConstructed=YES;
     UIView* preView=nil;
     for(int i=0;i<_controllerArray.count;i++){
         UIViewController* itemVc=_controllerArray[i];
