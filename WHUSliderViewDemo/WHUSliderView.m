@@ -205,7 +205,7 @@ static CGFloat kWHUSelectedLabelHeight=2.0f;
         preBtn=btn;
     }
     
-    CGFloat widthMore=_titelArray.count*maxWidth-_topConView.frame.size.width;
+    CGFloat widthMore=_titelArray.count*maxWidth-_topScrollView.frame.size.width;
     if(widthMore>0){
         _topWidthCts.constant=widthMore;
     }

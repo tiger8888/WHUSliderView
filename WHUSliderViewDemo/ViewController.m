@@ -9,10 +9,15 @@
 #import "ViewController.h"
 #import "WHUSliderView.h"
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet WHUSliderView *tview;
 @end
 
 @implementation ViewController
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self= [super initWithCoder:aDecoder];
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,16 +41,32 @@
     v6.title=@"trt标题22";
     
     
-    WHUSliderView* hv=[[WHUSliderView alloc] init];
-    hv.translatesAutoresizingMaskIntoConstraints=NO;
-    [self.view addSubview:hv];
-    NSDictionary* viewDic=NSDictionaryOfVariableBindings(hv);
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[hv]|" options:0 metrics:nil views:viewDic]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[hv]|" options:0 metrics:nil views:viewDic]];
+//    WHUSliderView* hv=[[WHUSliderView alloc] init];
+//    hv.translatesAutoresizingMaskIntoConstraints=NO;
+//    [self.view addSubview:hv];
+//    hv.controllerArray=@[v1,v2,v3,v4,v5,v6];
+//    hv.selectedColor=[UIColor redColor];
+//    [hv constructUI];
+//    NSDictionary* viewDic=NSDictionaryOfVariableBindings(hv);
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[hv]|" options:0 metrics:nil views:viewDic]];
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[hv]|" options:0 metrics:nil views:viewDic]];
+    
+    
+    WHUSliderView* hv=[[WHUSliderView alloc] initWithFrame:self.view.bounds];
     hv.controllerArray=@[v1,v2,v3,v4,v5,v6];
     hv.selectedColor=[UIColor redColor];
     [hv constructUI];
+    [self.view addSubview:hv];
+    
+    
+//    self.tview.controllerArray=@[v1,v2,v3,v4,v5,v6];
+//    self.tview.selectedColor=[UIColor redColor];
+//    [self.tview constructUI];
+    
+    
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
