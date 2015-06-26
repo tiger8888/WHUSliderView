@@ -61,15 +61,6 @@ static CGFloat kWHUSelectedLabelHeight=2.0f;
 }
 
 
--(void)constructUI{
-    if(self.superview==nil)
-        return;
-    else{
-        [self setNeedsLayout];
-        [self layoutIfNeeded];
-    }
-}
-
 
 -(void)layoutSubviews{
     [super layoutSubviews];

@@ -53,10 +53,9 @@
     
     
     WHUSliderView* hv=[[WHUSliderView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:hv];
     hv.controllerArray=@[v1,v2,v3,v4,v5,v6];
     hv.selectedColor=[UIColor redColor];
-    [hv constructUI];
-    [self.view addSubview:hv];
     
     
 //    self.tview.controllerArray=@[v1,v2,v3,v4,v5,v6];

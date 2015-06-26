@@ -15,5 +15,4 @@
 @property(nonatomic,strong) UIColor* selectedColor;
 //自定义条目的宽度.用于一些特殊场合.
 @property(nonatomic,assign) CGFloat topBtnWidth;
--(void)constructUI;
 @end
