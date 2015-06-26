@@ -420,6 +420,7 @@
 				8EFD09351B2F15430096A03B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EFD09361B2F15430096A03B /* Build configuration list for PBXNativeTarget "WHUSliderViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +429,7 @@
 				8EFD09381B2F15430096A03B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,6 +13,5 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[hv]|" options:0 metrics:nil views:viewDic]];
     hv.controllerArray=@[vc1,vc2,vc3,vc4,vc5,vc6]; //UIViewController 数组.
     hv.selectedColor=[UIColor redColor];
-    [hv constructUI];
 ```
  ![image](https://github.com/tiger8888/WHUSliderView/blob/master/demo.png)
