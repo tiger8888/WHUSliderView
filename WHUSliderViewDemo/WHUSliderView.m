@@ -187,6 +187,7 @@ static CGFloat kWHUSelectedLabelHeight=2.0f;
             [_topConView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[btn(==btnWidth)]" options:0 metrics:matrics views:viewDic]];
             [_topConView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[btn(==btnHeight)]" options:0 metrics:matrics views:viewDic]];
             self.firstBtn=btn;
+            self.firstBtn.selected=YES;
         }
         else{
             NSDictionary* viewDic=NSDictionaryOfVariableBindings(btn,preBtn);
