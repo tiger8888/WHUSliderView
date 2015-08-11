@@ -199,7 +199,7 @@ static CGFloat kWHUSelectedLabelHeight=2.0f;
     
     CGFloat widthMore=_titelArray.count*maxWidth-_topScrollView.frame.size.width;
     if(widthMore>0){
-        _topWidthCts.constant=widthMore;
+        _topWidthCts.constant=widthMore; 
     }
 }
 
