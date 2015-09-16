@@ -60,7 +60,10 @@ static CGFloat kWHUSelectedLabelHeight=2.0f;
     [self addContentViewWith:_bottomScrollView];
 }
 
-
+-(void)setControllerArray:(NSArray *)controllerArray{
+    _controllerArray=controllerArray;
+    [self setNeedsLayout];
+}
 
 -(void)layoutSubviews{
     [super layoutSubviews];
