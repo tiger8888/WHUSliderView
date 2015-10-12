@@ -108,6 +108,12 @@ static CGFloat kWHUSelectedLabelHeight=2.0f;
         preView=tempView;
     }
     if(_controllerArray!=nil&&_controllerArray.count>0){
+            for(int i=0;i<_controllerArray.count;i++){
+            UIViewController* v=(UIViewController*)_controllerArray[i];
+            if(v.title==nil){
+                v.title=[NSString stringWithFormat:@"titile为nil"];
+            }
+        }
         self.titelArray=[_controllerArray valueForKeyPath:@"title"];
     }
     [self makeButtonItems];
